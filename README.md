@@ -1,10 +1,10 @@
-#KmerGO beta v2.0
+# KmerGO beta v2.0
 
 **This is the unstable version for KmerGO
 
 The stable version KmerGO can be found in [here](https://github.com/ChnMasterOG/KmerGO)
 
-##Update log
+## Update log
 
 **v2.0
 
