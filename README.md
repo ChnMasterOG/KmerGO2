@@ -14,12 +14,13 @@ Please cite: Wang Y, Chen Q, Deng C, Zheng Y and Sun F (2020) KmerGO: A Tool to 
 
 Decompress the file and enter the software path.
 
-Type these commands if you first use KmerGO:
+Type these commands if you first use KmerGO2:
 
-> sudo chmod +x KmerGO
+> sudo chmod +x KmerGO2
+
 > sudo chmod +x ./bin/*
 
-You can type *`./KmerGO -h`* for help message.
+You can type *`./KmerGO2 -h`* for help message.
 
 ### Test data
 
@@ -31,7 +32,7 @@ Because the small size of testing data, **"k=25 MinValue=1" and other parameters
 
 ## Usage
 
-CommandLine version of KmerGO2 supports END-TO-END mode(*`tool=all`*) and FOUR-TOOLS mode(*`tool=kmc3/union/filtering/cap3`*). The main running command is *`./KmerGO <tool>`* with following options:
+CommandLine version of KmerGO2 supports END-TO-END mode(*`tool=all`*) and FOUR-TOOLS mode(*`tool=kmc3/union/filtering/cap3`*). The main running command is *`./KmerGO2 <tool>`* with following options:
 
 option | required | description 
 :----: | :------: | :---------:  
