@@ -2,7 +2,7 @@
 
 **KmerGO is a user-friendly tool to identify the group-specific sequences on two groups of high throughput sequencing datasets. A sequence that is present, or rich, in one group, but absent, or scarce, in another group is considered “group-specific” here. Furthermore, KmerGO can also be applied to capture trait-associated sequences for continuous-trait dataset.**
 
-KmerGo2 is almost 2x faster than KmerGO.
+KmerGO2 is almost 2x faster than KmerGO.
 
 Github for KmerGO(v1.x.x) is [here](https://github.com/ChnMasterOG/KmerGO).
 
