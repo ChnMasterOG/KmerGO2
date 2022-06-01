@@ -10,7 +10,7 @@ Please cite: Wang Y, Chen Q, Deng C, Zheng Y and Sun F (2020) KmerGO: A Tool to 
 
 ### Running on Linux (CommandLine)
 
-- Download the Linux command version of KmerGO2: [download link](https://github.com/ChnMasterOG/KmerGO2/releases/download/v2.0.0/KmerGO2_for_linux_x64.zip).
+Download the Linux command version of KmerGO2: [download link](https://github.com/ChnMasterOG/KmerGO2/releases/download/v2.0.0/KmerGO2_for_linux_x64.zip).
 
 Decompress the file and enter the software path.
 
