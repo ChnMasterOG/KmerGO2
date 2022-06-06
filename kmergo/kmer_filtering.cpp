@@ -38,7 +38,7 @@ void categorical_feature_filtering(uint16_t Nprocess, std::vector<std::string> f
 
 	/* read head text and set labels */
 	std::getline(input_file, line);
-	mtx.lock();
+	mtx.lock();	// mutex
 	progress += line.size() + 1;	// update progress
 	mtx.unlock();
 	output_file_l << line << "\tASS\tLabel\n";	// write logical file head text
@@ -46,7 +46,7 @@ void categorical_feature_filtering(uint16_t Nprocess, std::vector<std::string> f
 	position = line.find("\t");
 	line = line.substr(position + 1);	// remove string "k-mer"
 	position = line.find("\t");
-	while (position != line.npos)
+	while (position != line.npos)	// split groupA and groupB
 	{
 		std::string sample_name = line.substr(0, position);
 		if (p.trait_information_map.find(sample_name) != p.trait_information_map.end())
@@ -122,7 +122,7 @@ void categorical_feature_filtering(uint16_t Nprocess, std::vector<std::string> f
 				}
 				std::vector<Logistic_Data> testdataSet(dataSet);
 				Logistic model(dataSet);
-				model.logisticRegression();
+				model.logisticRegression();	// fit the logistics model
 				model.predictClass(testdataSet);
 				/* calculate the confusion matrix */
 				tp = tn = 0;
@@ -220,7 +220,7 @@ void continuous_feature_filtering(uint16_t Nprocess, std::vector<std::string> fi
 			std::vector<float> group;
 			group.insert(group.end(), group1.begin(), group1.end());
 			group.insert(group.end(), group2.begin(), group2.end());
-			float corr = spearman_correlation_coefficient(kmer_fre, group);
+			float corr = spearman_correlation_coefficient(kmer_fre, group);	// calculate spearman correlation
 			if (corr >= p.corr_vaule)
 			{
 				output_file_n << src_line << '\t' << std::to_string(pValue) << '\t' << std::to_string(corr) << '\n';

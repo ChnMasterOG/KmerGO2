@@ -78,7 +78,7 @@ void get_Son_Matrix(uint16_t Nprocess, KmerGO_parameters p, std::vector<std::str
 	/* create minimum/maximum k-mer object */
 	std::string temp_str = "";
 	for (i = 0; i < _kmer_length - 1; i++) temp_str += "A";
-	minimum_kmer_object.from_string(temp_str);	// is less than "A"*_kmer_length
+	minimum_kmer_object.from_string(temp_str);	// is less than "A"*_kmer_length (modified kmer_api "operator<" function)
 	temp_str = "";
 	for (i = 0; i < _kmer_length; i++) temp_str += "T";
 	maximum_kmer_object.from_string(temp_str);
@@ -193,7 +193,7 @@ void get_Son_Matrix(uint16_t Nprocess, KmerGO_parameters p, std::vector<std::str
 		else
 		{
 			mtx.lock();
-			progress++;
+			progress++;	// update progress
 			mtx.unlock();
 		}
 		if (end_number == files_number)	// end of running
