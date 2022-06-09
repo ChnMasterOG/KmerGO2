@@ -10,7 +10,7 @@ Please cite: Wang Y, Chen Q, Deng C, Zheng Y and Sun F (2020) KmerGO: A Tool to 
 
 ### Running on Linux (CommandLine)
 
-Download the Linux command version of KmerGO2(x86 64bit): [download link](https://github.com/ChnMasterOG/KmerGO2/releases/download/v2.0.0/KmerGO2_for_linux_x64.zip).
+Download the Linux command version of KmerGO2(x86 64bit): [download link](https://github.com/ChnMasterOG/KmerGO2/releases/download/v2.0.1/KmerGO2_for_linux_x64.zip).
 
 Decompress the file and enter the software path.
 
@@ -28,7 +28,7 @@ We prepared some FASTA format files which are stored in "test_data/samples".
 
 And trait files can be also found in folder "test_data".
 
-Because the small size of testing data, **"k=25 MinValue=1" and other parameters as defaults are recommended**.
+Because of the small size of testing data, **"k=25 MinValue=1" and other parameters as defaults are recommended**.
 
 ## Usage
 
@@ -102,4 +102,4 @@ Please send bug reports, comments, or questions to [here](https://github.com/Chn
 
 ----------
 
-Last update: 2022-06-01
+Last update: 2022-06-09
