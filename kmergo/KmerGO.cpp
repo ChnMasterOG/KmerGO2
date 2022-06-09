@@ -225,9 +225,22 @@ int main(int argc, char* argv[])
 		else
 		{
 			param.groupA_name = param.trait_information_map.begin()->second;
+			param.groupB_name = "";
 			std::map<std::string, std::string>::iterator it;
 			for (it = param.trait_information_map.begin(); it != param.trait_information_map.end(); it++) {
 				if (!param.groupA_name.compare(it->second)) param.groupA_number++;
+				else if (param.groupB_name.compare(it->second) && param.groupB_name.empty())
+				{
+					param.groupB_name = it->second;
+					param.groupB_number++;
+				}
+				else if (!param.groupB_name.compare(it->second)) param.groupB_number++;
+				else 
+				{
+					std::cout << "KmerGO ver. " << KMERGO_VER << " (" << KMERGO_DATE << ")\n"
+						<< "Error! More than 2 groups of data.\n";
+					return EXIT_FAILURE;
+				}
 			}
 		}
 	}

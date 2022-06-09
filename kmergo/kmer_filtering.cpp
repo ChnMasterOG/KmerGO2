@@ -74,7 +74,7 @@ void categorical_feature_filtering(uint16_t Nprocess, std::vector<std::string> f
 		position = line.find("\t");
 		std::vector<float> group1, group2;
 		int cnt = 0, tp = 0, tn = 0;
-		char judge_label;
+		std::string judge_label;
 		while (position != line.npos)
 		{
 			std::string value_str = line.substr(0, position);
@@ -96,10 +96,10 @@ void categorical_feature_filtering(uint16_t Nprocess, std::vector<std::string> f
 		}
 		/* calculation */
 		float assL = ((float)tp / group1.size() + (float)tn / group2.size()) / 2;	// ass_l
-		if (assL > 0.5) judge_label = 'A';
+		if (assL > 0.5) judge_label = p.groupA_name;
 		else
 		{
-			judge_label = 'B';
+			judge_label = p.groupB_name;
 			assL = 1 - assL;
 		}
 		if (assL >= p.assl)	// logical ASS

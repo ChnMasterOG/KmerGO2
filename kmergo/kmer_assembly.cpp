@@ -97,6 +97,11 @@ short kmer_assembly(KmerGO_parameters& p, std::string& loginfo)
 			return 3;
 		}
 	}
+	else
+	{
+		cmd = "rm " + joinPath(p.results_path, "Afeatures.fa");
+		r = system(cmd.c_str());
+	}
 	if (!NameB.empty())
 	{
 		cmd = "mv " + onput_file_name_B + " " + joinPath(p.results_path, NameB + "_specific.fa");
@@ -106,6 +111,11 @@ short kmer_assembly(KmerGO_parameters& p, std::string& loginfo)
 			loginfo = "mv Command Error!";
 			return 3;
 		}
+	}
+	else
+	{
+		cmd = "rm " + joinPath(p.results_path, "Bfeatures.fa");
+		r = system(cmd.c_str());
 	}
 
 	if (!NameA.empty())

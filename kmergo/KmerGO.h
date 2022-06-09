@@ -18,8 +18,8 @@
 #include "../stats_ml/stats_ml.h"
 #include "../kmc_api/kmc_file.h"
 
-#define KMERGO_VER	"2.0.0"
-#define KMERGO_DATE	"2022-05-09"
+#define KMERGO_VER	"2.0.1"
+#define KMERGO_DATE	"2022-06-09"
 
 #define MAX_FILES	65535
 #define MAX_THREAD	256
@@ -59,6 +59,8 @@ typedef struct
 	//group information
 	std::string groupA_name;
 	uint32 groupA_number;
+	std::string groupB_name;
+	uint32 groupB_number;
 	std::map<std::string, std::string> trait_information_map;
 }KmerGO_parameters;
 
