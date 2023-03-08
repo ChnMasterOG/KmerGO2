@@ -96,10 +96,20 @@ SRR3.fasta,5.22
 
 **Templates can be also found in the folder "test_data".**
 
+## Tips
+
+1) KmerGO2 must be called from its own directory now because otherwise it cannot find the bin/ directory. (refer to [issue6](https://github.com/ChnMasterOG/KmerGO2/issues/6))
+
+2) The directory path reference by -i must have ONLY the relevant .fasta (or .fastq) files in that directory and nothing else.
+
+## Contributions
+
+Thank meshpv for suggestions.
+
 ## Contacts and bug reports
 
 Please send bug reports, comments, or questions to [here](https://github.com/ChnMasterOG/KmerGO2/issues).
 
 ----------
 
-Last update: 2022-06-09
+Last update: 2023-03-08
